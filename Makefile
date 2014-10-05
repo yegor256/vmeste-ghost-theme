@@ -10,14 +10,14 @@ zip: sass
 	mkdir -p target
 	cp -nR theme/* target
 	rm target/assets/*.scss
-	zip -r theme.zip target/*
+	rm -f theme.zip
+	cd target && zip -r ../theme.zip *
 
 run: zip
-	cd ghost/content/themes
-	rm -rf vmeste
-	mkdir vmeste
-	cd vmeste
-	unzip ../../../theme.zip
-	cd ../..
-	npm start
+	cd ghost/content/themes && \
+          rm -rf vmeste && \
+          mkdir vmeste && \
+          cd vmeste && \
+          unzip ../../../../theme.zip
+	cd ghost && npm start
 
