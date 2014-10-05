@@ -21,9 +21,6 @@ a, a:visited, a:hover {
 .dark {
   color: $dark !important;
 }
-.slogan {
-  letter-spacing: 1.2px;
-}
 .date {
   color: $gray;
 }
@@ -32,6 +29,14 @@ a, a:visited, a:hover {
   position: relative;
   width: 600px;
   color: $dark;
+  .bar {
+    position: absolute;
+    left: -34px;
+    top: -46px;
+    width: 1px;
+    height: 398px;
+    background-color: $light;
+  }
 }
 .menu {
   position: absolute;
@@ -42,7 +47,7 @@ a, a:visited, a:hover {
   a {
     text-decoration: none;
   }
-  ul {
+  > ul {
     margin-top: 51px;
     padding-left: 0;
     list-style: none;
@@ -54,6 +59,9 @@ a, a:visited, a:hover {
       color: $gray;
     }
   }
+  .slogan {
+    font-weight: bold;
+  }
   .social {
     list-style: none;
     text-transform: none;
@@ -62,14 +70,6 @@ a, a:visited, a:hover {
       border: none;
     }
   }
-}
-.bar {
-  position: absolute;
-  left: -34px;
-  top: -46px;
-  width: 1px;
-  height: 398px;
-  background-color: $light;
 }
 h1, h2, h3 {
   text-transform: uppercase;
