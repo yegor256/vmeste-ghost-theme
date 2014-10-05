@@ -1,34 +1,37 @@
+$gray: #a9a9a9;
+$light: #eee;
+$white: #fdfcfc;
+$dark: #6d6d6d;
+$em: 16px;
+
 * {
   font-family: 'Roboto Slab', 'Times New Roman', serif;
 }
 body {
-  background-color: #fdfcfc;
-  font-size: 16px;
+  background-color: $white;
+  font-size: $em;
 }
 a, a:visited, a:hover {
-  color: #a9a9a9;
+  color: $gray;
 }
 .logo {
   width: 180px;
   height: 103px;
 }
 .dark {
-  color: #6d6d6d !important;
-}
-.menu a {
-  text-decoration: none;
+  color: $dark !important;
 }
 .slogan {
   letter-spacing: 1.2px;
 }
 .date {
-  color: #a9a9a9;
+  color: $gray;
 }
 .main {
   margin: 117px auto;
   position: relative;
   width: 600px;
-  color: #6d6d6d;
+  color: $dark;
 }
 .menu {
   position: absolute;
@@ -36,26 +39,29 @@ a, a:visited, a:hover {
   width: 180px;
   left: -231px;
   top: -17.5px;
-}
-.menu-ul {
-  margin-top: 51px;
-  padding-left: 0;
-  list-style: none;
-  text-transform: uppercase;
-}
-.menu-ul li {
-  font-size: 14px;
-  padding: .7em 0;
-  border-top: 1px solid #eee;
-  color: #a9a9a9;
-}
-.social {
-  list-style: none;
-  text-transform: none;
-}
-.social li {
-  padding: 0;
-  border: none;
+  a {
+    text-decoration: none;
+  }
+  ul {
+    margin-top: 51px;
+    padding-left: 0;
+    list-style: none;
+    text-transform: uppercase;
+    li {
+      font-size: 14px;
+      padding: .7em 0;
+      border-top: 1px solid $light;
+      color: $gray;
+    }
+  }
+  .social {
+    list-style: none;
+    text-transform: none;
+    li {
+      padding: 0;
+      border: none;
+    }
+  }
 }
 .bar {
   position: absolute;
@@ -63,24 +69,24 @@ a, a:visited, a:hover {
   top: -46px;
   width: 1px;
   height: 398px;
-  background-color: #eee;
+  background-color: $light;
 }
 h1, h2, h3 {
   text-transform: uppercase;
 }
 h1 {
-  font-size: 1.4em;
+  font-size: 1.4 * $em;
   font-weight: bold;
 }
 h2 {
-  font-size: 1.2em;
-  margin-top: 2em;
+  font-size: 1.2 * $em;
+  margin-top: 2 * $em;
 }
 .break {
   height: 1px;
-  background-color: #eee;
+  background-color: $gray;
   border: 0;
-  margin-top: 4em;
+  margin-top: 4 * $em;
 }
 .post img {
   width: 700px;
@@ -88,27 +94,23 @@ h2 {
 .post-header img {
   width: 600px;
 }
-.button {
-  position: relative;
-  display: inline-block;
-  width: 2.4em;
-  height: 2.2em;
-  line-height: 2.2em;
-  text-align: center;
-  background: #a9a9a9;
-  border-radius: 4px;
-}
-.button, .button:visited {
-  color: white;
-}
-.button:hover {
-  color: black;
-}
-.count {
-  display: none;
-  position: absolute;
-  bottom: -.8em;
-  right: .1em;
-  font-size: .8em;
-  color: black;
+.buttons {
+  .button {
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+    height: 1.6 * $em;
+    line-height: 1.6 * $em;
+    border: 1px solid $light;
+    border-radius: .2 * $em;
+    padding: 0 .4 * $em;
+    .count {
+      display: none;
+      font-size: .8em;
+      color: $gray;
+    }
+    &:hover {
+      color: $dark;
+    }
+  }
 }
