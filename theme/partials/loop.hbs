@@ -1,8 +1,8 @@
 {{#foreach posts}}
 <article class="{{post_class}}">
-  <header class="post-header">
+  <header>
     {{#if image}}
-      <a href="{{url}}"><img src="{{image}}"/></a>
+      <a href="{{url}}"><img src="{{image}}" class="photo"/></a>
     {{/if}}
     <h1 class="post-title">
       <a href="{{url}}" class="dark">{{title}}</a>

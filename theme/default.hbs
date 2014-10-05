@@ -18,41 +18,41 @@
     <div>
       <div class="main">
         <div class="bar"></div>
-        <div class="menu">
-          <a href="/">
-            {{#if @blog.logo}}
-              <a class="blog-logo" href="{{@blog.url}}">
-                <img src="{{@blog.logo}}" class="logo" alt="logo" />
-              </a>
-            {{/if}}
-          </a>
-          <ul>
-            <li class="dark slogan">Two girls two souls</li>
-            <li><a href="/about">About us</a></li>
-            <li>
-              <ul class="social">
-                <li>ANIA</li>
-                <li>
-                  <a href="https://www.facebook.com/ania.steshko"><i class="fa fa-lg fa-facebook-square"></i></a>
-                  <a href="http://instagram.com/aniasteshko"><i class="fa fa-lg fa-instagram"></i></a>
-                  <a href="http://www.pinterest.com/aniasteshko/"><i class="fa fa-lg fa-pinterest"></i></a>
-                  <a href="mailto:ania@vmeste.land"><i class="fa fa-lg fa-envelope-o"></i></a>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <ul class="social">
-                <li>NOA</li>
-                <li>
-                  <a href="https://www.facebook.com/noa.krem"><i class="fa fa-lg fa-facebook-square"></i></a>
-                  <a href="http://www.instagram.com/noa_krem"><i class="fa fa-lg fa-instagram"></i></a>
-                  <a href="mailto:noa@vmeste.land"><i class="fa fa-lg fa-envelope-o"></i></a>
-                </li>
-              </ul>
-            </li>
-            <li><a href="{{@blog.url}}/rss/"><i class="fa fa-lg fa-rss"></i></a></li>
-          </ul>
-        </div>
+        <ul class="menu">
+          <li>
+            <a href="/">
+              {{#if @blog.logo}}
+                <a class="blog-logo" href="{{@blog.url}}">
+                  <img src="{{@blog.logo}}" class="logo" alt="logo" />
+                </a>
+              {{/if}}
+            </a>
+          </li>
+          <li class="dark slogan">Two girls two souls</li>
+          <li><a href="/about">About us</a></li>
+          <li>
+            <ul class="social">
+              <li>ANIA</li>
+              <li>
+                <a href="https://www.facebook.com/ania.steshko"><i class="fa fa-lg fa-facebook-square"></i></a>
+                <a href="http://instagram.com/aniasteshko"><i class="fa fa-lg fa-instagram"></i></a>
+                <a href="http://www.pinterest.com/aniasteshko/"><i class="fa fa-lg fa-pinterest"></i></a>
+                <a href="mailto:ania@vmeste.land"><i class="fa fa-lg fa-envelope-o"></i></a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <ul class="social">
+              <li>NOA</li>
+              <li>
+                <a href="https://www.facebook.com/noa.krem"><i class="fa fa-lg fa-facebook-square"></i></a>
+                <a href="http://www.instagram.com/noa_krem"><i class="fa fa-lg fa-instagram"></i></a>
+                <a href="mailto:noa@vmeste.land"><i class="fa fa-lg fa-envelope-o"></i></a>
+              </li>
+            </ul>
+          </li>
+          <li class="desktop"><a href="{{@blog.url}}/rss/"><i class="fa fa-lg fa-rss"></i></a></li>
+        </ul>
         {{{body}}}
         {{ghost_foot}}
       </div>

@@ -3,6 +3,7 @@ $light: #eee;
 $white: #fdfcfc;
 $dark: #6d6d6d;
 $em: 16px;
+$threshold: 1100px;
 
 * {
   font-family: 'Roboto Slab', 'Times New Roman', serif;
@@ -24,12 +25,22 @@ a, a:visited, a:hover {
 .date {
   color: $gray;
 }
+.desktop {
+  @media all and (max-width: $threshold) {
+    display: none;
+  }
+}
 .main {
   margin: 117px auto;
   position: relative;
   width: 600px;
   color: $dark;
+  @media all and (max-width: $threshold) {
+    width: 100%;
+    margin-top: 0;
+  }
   .bar {
+    @extend .desktop;
     position: absolute;
     left: -34px;
     top: -46px;
@@ -44,27 +55,40 @@ a, a:visited, a:hover {
   width: 180px;
   left: -231px;
   top: -17.5px;
+  padding-left: 0;
+  list-style: none;
+  text-transform: uppercase;
+  li {
+    font-size: .85 * $em;
+    padding: .7 * $em 0;
+    border-top: 1px solid $light;
+    color: $gray;
+    &:first-child {
+      border-top: 0;
+    }
+  }
+  @media all and (max-width: $threshold) {
+    position: relative;
+    text-align: left;
+    width: 100%;
+    left: 0;
+    top: 0;
+    li {
+      border: 0;
+      padding: .4 * $em 0;
+    }
+  }
   a {
     text-decoration: none;
   }
-  > ul {
-    margin-top: 51px;
-    padding-left: 0;
-    list-style: none;
-    text-transform: uppercase;
-    li {
-      font-size: 14px;
-      padding: .7em 0;
-      border-top: 1px solid $light;
-      color: $gray;
-    }
-  }
   .slogan {
+    @extend .desktop;
     font-weight: bold;
   }
   .social {
     list-style: none;
     text-transform: none;
+    padding: 0;
     li {
       padding: 0;
       border: none;
@@ -88,11 +112,11 @@ h2 {
   border: 0;
   margin-top: 4 * $em;
 }
-.post img {
+.photo {
   width: 700px;
-}
-.post-header img {
-  width: 600px;
+  @media all and (max-width: 700px) {
+    width: 100%;
+  }
 }
 .buttons {
   .button {
