@@ -4,7 +4,7 @@ clean:
 
 sass:
 	mkdir -p target/assets
-	sass --style compressed theme/assets/main.scss target/assets/main.css
+	sass --style compressed --sourcemap=none theme/assets/main.scss target/assets/main.css
 
 zip: sass
 	mkdir -p target

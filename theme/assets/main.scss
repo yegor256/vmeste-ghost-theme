@@ -112,10 +112,23 @@ h2 {
   border: 0;
   margin-top: 4 * $em;
 }
-.photo {
+.photo,
+.post img {
   width: 700px;
   @media all and (max-width: 700px) {
     width: 100%;
+  }
+}
+.fa {
+  font-size: 1.4 * $em !important;
+  &:hover {
+    color: $dark;
+  }
+  @media all and (max-width: $threshold) {
+    font-size: 1.6 * $em !important;
+  }
+  @media all and (max-width: 700px) {
+    font-size: 2 * $em !important;
   }
 }
 .buttons {
@@ -123,18 +136,13 @@ h2 {
     text-decoration: none;
     position: relative;
     display: inline-block;
-    height: 1.6 * $em;
-    line-height: 1.6 * $em;
     border: 1px solid $light;
     border-radius: .2 * $em;
-    padding: 0 .4 * $em;
+    padding: .2 * $em .4 * $em;
     .count {
       display: none;
       font-size: .8em;
       color: $gray;
-    }
-    &:hover {
-      color: $dark;
     }
   }
 }

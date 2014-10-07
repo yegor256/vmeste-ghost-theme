@@ -7,38 +7,38 @@
       <nav class="share" role="navigation">
         <a href="http://www.facebook.com/sharer/sharer.php?u={{@blog.url}}{{url}}"
           title="Share on Facebook" class="button">
-          <i class="fa fa-lg fa-facebook"></i>
+          <i class="fa fa-facebook"></i>
           <span class="count count-facebook">0</span>
         </a>
         <a href="https://twitter.com/share?url={{@blog.url}}{{url}}&amp;text={{title}}"
           title="Share on Twitter" class="button">
-          <i class="fa fa-lg fa-twitter"></i>
+          <i class="fa fa-twitter"></i>
           <span class="count count-twitter">0</span>
         </a>
         <a href="https://plus.google.com/share?url={{@blog.url}}{{url}}"
           title="Share on Google+" class="button">
-          <i class="fa fa-lg fa-google-plus"></i>
+          <i class="fa fa-google-plus"></i>
           <span class="count count-googleplus">0</span>
         </a>
         <a href="http://www.stumbleupon.com/submit?url={{@blog.url}}{{url}}&amp;title={{title}}"
           title="Share on StumbleUpon" class="button">
-          <i class="fa fa-lg fa-stumbleupon"></i>
+          <i class="fa fa-stumbleupon"></i>
           <span class="count count-stumbleupon">0</span>
         </a>
         <!--
         <a href="https://www.linkedin.com/cws/share?url={{@blog.url}}{{url}}"
           title="Share on LinkedIn" class="button">
-          <i class="fa fa-lg fa-linkedin"></i>
+          <i class="fa fa-linkedin"></i>
           <span class="count count-linkedin">0</span>
         </a>
         <a href="http://digg.com/submit?phase=2&amp;url={{@blog.url}}{{url}}&amp;title={{title}}"
           title="Share on Digg" class="button">
-          <i class="fa fa-lg fa-digg"></i>
+          <i class="fa fa-digg"></i>
           <span class="count count-digg">0</span>
         </a>
         <a href="http://reddit.com/submit?url={{@blog.url}}{{url}}&amp;title={{title}}"
           title="Share on Reddit" class="button">
-          <i class="fa fa-lg fa-reddit"></i>
+          <i class="fa fa-reddit"></i>
           <span class="count count-reddit">0</span>
         </a>
         -->
@@ -50,9 +50,10 @@
         <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time>
       </p>
     </header>
-    <section>
+    <section class="post">
       {{content}}
     </section>
   </article>
+  <div id="disqus_thread"></div>
 </main>
 {{/post}}
